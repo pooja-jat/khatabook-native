@@ -2,17 +2,17 @@ const { default: mongoose } = require("mongoose");
 
 const transactionSchema = new mongoose.Schema(
   {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     text: {
       type: String,
       required: true,
     },
     amount: {
       type: Number,
-      required: true,
-    },
-    isIncome: {
-      type: Boolean,
-      default: true,
       required: true,
     },
   },

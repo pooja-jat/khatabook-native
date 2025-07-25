@@ -11,11 +11,11 @@ import {
 const register = () => {
   return (
     <View className="min-h-screen  flex items-center justify-center bg-white p-8">
-      <Image
+      {/* <Image
         style={styles.image}
         source={require("../../assets/images/login.jpg")}
         className="h-72"
-      />
+      /> */}
       <Text className="text-2xl font-bold uppercase">Register Here</Text>
       <View className="border border-gray-200 rounded-md p-4 my-2 mb-8">
         <View className="mb-20">

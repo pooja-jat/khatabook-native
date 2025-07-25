@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2716dc94-83ef-4b31-9e92-1417489a3deb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/client/app/(auth)/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(auth)/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/(auth)/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(auth)/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/TransactionListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/TransactionListItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/dashboard/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/features/transactions/transactionSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/features/transactions/transactionSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore copy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/dbConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/dbConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/authControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/transactionControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/transactionControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/transactionModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/transactionModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/authRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="30BaIR2kUYNPdEQD1gpOidoM1p5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Pooja Coaching/khatabook-native&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2716dc94-83ef-4b31-9e92-1417489a3deb" name="Changes" comment="" />
+      <created>1753103339908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753103339908</updated>
+    </task>
+    <servers />
+  </component>
+</project>

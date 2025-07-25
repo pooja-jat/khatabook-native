@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const connectDB = require("./config/dbConfig");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ connectDB();
 //Body-Parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 //Default Route
 app.get("/", (req, res) => {
@@ -19,6 +21,9 @@ app.get("/", (req, res) => {
   });
 });
 
+app.use("/api/auth", require("./routes/authRoutes"));
+
+app.use("/api", require("./routes/transactionRoutes"));
 //Error Handler
 // app.use(errorHandler);
 

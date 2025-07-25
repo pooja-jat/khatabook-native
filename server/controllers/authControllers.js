@@ -20,7 +20,7 @@ const registerUser = async (req, res) => {
   }
   //Check if user already exists
   const emailExist = await User.findOne({ email: email });
-  
+
   if (emailExist) {
     res.status(400);
     throw new Error("User Already Exist");
@@ -36,6 +36,7 @@ const registerUser = async (req, res) => {
     email,
     password: hashedPassword,
   });
+  
   if (!user) {
     res.status(400);
     throw new Error("User Not Created");
@@ -76,6 +77,10 @@ const loginUser = async (req, res) => {
   }
 };
 
+const privateController = (req, res) => {
+  res.json(req.user);
+};
+
 //Generate Token
 
 const generatToken = (id) => {
@@ -84,4 +89,4 @@ const generatToken = (id) => {
   });
 };
 
-module.exports = { registerUser, loginUser };
+module.exports = { registerUser, loginUser, privateController };

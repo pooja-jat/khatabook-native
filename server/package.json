@@ -1,17 +1,16 @@
 {
   "name": "daily-dabba",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "server": "node server/server.js",
-    "dev": "nodemon server/server.js"
+    "dev": "nodemon index.js"
   },
-  "author": "",
+  "author": "Pooja Jat",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
-    "colors": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
