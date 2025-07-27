@@ -11,6 +11,8 @@ import {
 import Toast from "react-native-toast-message";
 import authService from "../features/auth/authService";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { getUser } from "../features/auth/authSlice";
+import { useDispatch } from "react-redux";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +23,7 @@ const Register = () => {
   });
 
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const { name, email, password, confirmPassword } = formData;
 
@@ -41,6 +44,7 @@ const Register = () => {
       await authService.register(formData);
       const userToken = await AsyncStorage.getItem("userToken");
       if (userToken) {
+        dispatch(getUser());
         router.push("/dashboard");
       }
     }

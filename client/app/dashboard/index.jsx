@@ -4,13 +4,14 @@ import TransactionsList from "../components/TransactionsList";
 import { useEffect } from "react";
 import { getTransactions } from "../features/transactions/transactionSlice";
 import authService from "../features/auth/authService";
-import {useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 
 const Index = () => {
   const router = useRouter();
   const transactions = useSelector(
     (state) => state.transactions.allTransactions ?? []
   );
+  const auth = useSelector((state) => state.auth.auth ?? null);
 
   const dispatch = useDispatch();
 
@@ -31,7 +32,7 @@ const Index = () => {
   return (
     <View className="min-h-screen p-4 py-8 bg-black">
       <View className="p-2">
-        <Text className="text-white font-bold  text-xl">Pooja Jat</Text>
+        <Text className="text-white font-bold  text-xl">{auth.name}</Text>
         <Text className="text-white">Developer</Text>
       </View>
       <View className=" p-4 rounded-xl " style={styles.main}>

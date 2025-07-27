@@ -10,17 +10,21 @@ import {
 import authService from "../features/auth/authService";
 import { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useDispatch } from "react-redux";
+import { getUser } from "../features/auth/authSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("pooja@gmail.com");
   const [password, setPassword] = useState("12345678");
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const handleLogin = async () => {
     try {
       await authService.login({ email, password });
       const userToken = await AsyncStorage.getItem("userToken");
       if (userToken) {
+        dispatch(getUser());
         router.push("/dashboard");
       }
     } catch (error) {
