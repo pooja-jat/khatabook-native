@@ -24,7 +24,7 @@ const Login = () => {
         router.push("/dashboard");
       }
     } catch (error) {
-      console.log("SomeThing went Wrong", error);
+      console.log("SomeThing Went Wrong", error);
     }
   };
 

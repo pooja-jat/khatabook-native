@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRouter } from "expo-router";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
 
   const checkAndRedirect = async () => {
@@ -30,4 +30,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

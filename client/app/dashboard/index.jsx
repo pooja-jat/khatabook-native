@@ -4,9 +4,9 @@ import TransactionsList from "../components/TransactionsList";
 import { useEffect } from "react";
 import { getTransactions } from "../features/transactions/transactionSlice";
 import authService from "../features/auth/authService";
-import { router, useRouter } from "expo-router";
+import {useRouter } from "expo-router";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const transactions = useSelector(
     (state) => state.transactions.allTransactions ?? []
@@ -69,7 +69,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
 
 const styles = StyleSheet.create({
   main: {

@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2716dc94-83ef-4b31-9e92-1417489a3deb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/(auth)/_layout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/(auth)/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/(auth)/register.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/_layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/dashboard/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/dashboard/_layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/auth/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/auth/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/auth/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/auth/register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/features/auth/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/features/auth/authService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
     </list>

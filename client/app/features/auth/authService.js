@@ -2,10 +2,16 @@ import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const register = async (formData) => {
-  const response = await axios.post("/api/auth/register", formData);
-  await AsyncStorage.setItem("userToken", JSON.stringify(response.data));
-  // localStorage.setItem('user', JSON.stringify(response.data))
-  return response.data;
+  try {
+    const response = await axios.post(
+      "http://192.168.57.161:8080/api/auth/register",
+      formData
+    );
+    await AsyncStorage.setItem("userToken", JSON.stringify(response.data));
+    return response.data;
+  } catch (error) {
+    console.log("SomeThing Went Wrong", error);
+  }
 };
 
 const login = async (formData) => {
@@ -14,11 +20,10 @@ const login = async (formData) => {
       "http://192.168.57.161:8080/api/auth/login",
       formData
     );
-
     await AsyncStorage.setItem("userToken", JSON.stringify(response.data));
     return response.data;
   } catch (error) {
-    console.log("someThing Went Wrong", error);
+    console.log("SomeThing Went Wrong", error);
   }
 };
 
