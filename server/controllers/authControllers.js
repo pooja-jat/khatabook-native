@@ -36,7 +36,7 @@ const registerUser = async (req, res) => {
     email,
     password: hashedPassword,
   });
-  
+
   if (!user) {
     res.status(400);
     throw new Error("User Not Created");
@@ -72,7 +72,7 @@ const loginUser = async (req, res) => {
       createdAt: user.createdAt,
     });
   } else {
-    res.status(400);
+    res.status(406).json("Invalid Credentials");
     throw new Error("Invalid Credentials");
   }
 };

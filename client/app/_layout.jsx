@@ -5,6 +5,7 @@ import store from "./features/store";
 import "./global.css";
 
 export default function RootLayout() {
+
   return (
     <Provider store={store}>
       <SafeScreen>

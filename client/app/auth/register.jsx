@@ -8,7 +8,8 @@ import {
   View,
 } from "react-native";
 
-const register = () => {
+const Register = () => {
+  console.log("register");
   return (
     <View className="min-h-screen  flex items-center justify-center bg-white p-8">
       {/* <Image
@@ -55,7 +56,7 @@ const register = () => {
   );
 };
 
-export default register;
+export default Register;
 
 const styles = StyleSheet.create({
   image: {

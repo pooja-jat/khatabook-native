@@ -5,23 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2716dc94-83ef-4b31-9e92-1417489a3deb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/client/app/(auth)/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(auth)/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/(auth)/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(auth)/register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/TransactionListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/TransactionListItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/dashboard/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/features/transactions/transactionSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/features/transactions/transactionSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/(auth)/_layout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/(auth)/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/(auth)/register.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/_layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/dashboard/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/dashboard/_layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore copy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/dbConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/dbConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/authControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/transactionControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/transactionControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/transactionModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/transactionModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/userModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/authRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
