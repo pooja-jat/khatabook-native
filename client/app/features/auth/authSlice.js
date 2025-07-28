@@ -35,12 +35,12 @@ const authSlice = createSlice({
 
 export default authSlice.reducer;
 
-//Get Transaction
+//Get User
 
 export const getUser = createAsyncThunk("FETCH/USER", async (_, thunkAPI) => {
   try {
-    let obj = await AsyncStorage.getItem("userToken");
-    return JSON.parse(obj ?? {});
+    let varify = await AsyncStorage.getItem("userToken");
+    return JSON.parse(varify ?? {});
   } catch (error) {
     console.log("object", error);
     const message = error.response.data.message;

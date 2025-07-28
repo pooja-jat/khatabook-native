@@ -21,8 +21,11 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
+      console.log("step1")
       await authService.login({ email, password });
       const userToken = await AsyncStorage.getItem("userToken");
+      console.log("userToken", userToken);
+
       if (userToken) {
         dispatch(getUser());
         router.push("/dashboard");

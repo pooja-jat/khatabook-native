@@ -30,28 +30,28 @@ const Index = () => {
   }, []);
 
   return (
-    <View className="min-h-screen p-4 py-8 bg-black">
-      <View className="p-2">
-        <Text className="text-white font-bold  text-xl">{auth.name}</Text>
-        <Text className="text-white">Developer</Text>
+    <View className="min-h-screen p-4 bg-black">
+      <View className="p-2 my-2">
+        <Text className="text-white font-bold my-2 text-3xl">{auth.name}</Text>
+        <Text className="text-white  text-xl font-semibold">Developer</Text>
       </View>
       <View className=" p-4 rounded-xl " style={styles.main}>
         <Text className="text-lg text-white">Your Current Balance : </Text>
         <Text className="text-4xl text-white my-4">${balance}.00</Text>
       </View>
-      <View className="my-4 flex-row items-center justify-between">
+      <View className="my-6 flex-row items-center justify-between">
         <View className="px-4 py-2 flex items-center justify-between rounded-2xl  bg-white w-[45%]">
-          <Text className="text-xl  font-bold text-purple-600  my-1">
+          <Text className="text-2xl  font-bold text-purple-600  my-1">
             ${income}
           </Text>
-          <Text className="text-sm  font-bold text-purple-600">Income</Text>
+          <Text className="text-xl  font-bold text-purple-600">Income</Text>
         </View>
         <View
-          className="px-4 py-2  flex-col  items-center justify-between rounded-2xl bg- w-[45%] "
+          className="px-4 py-2 flex-col items-center justify-between rounded-2xl bg-white  w-[45%] "
           style={styles.txt}
         >
-          <Text className="text-xl font-bold text-white my-1">${expense}</Text>
-          <Text className="text-sm  font-bold text-white">Expense</Text>
+          <Text className="text-2xl font-bold text-white my-1">${expense}</Text>
+          <Text className="text-xl  font-bold text-white">Expense</Text>
         </View>
       </View>
       <TransactionsList />
@@ -61,9 +61,11 @@ const Index = () => {
             authService.logOut();
             router.push("/auth/login");
           }}
-          className="bg-red-600 my-16 py-4 px-4 rounded-md mt-2"
+          className="bg-red-600 my-16 py-4 px-4 rounded-md"
         >
-          <Text className="text-white text-center fonyt-semibold">Logout</Text>
+          <Text className="text-white text-center text-2xl font-bold">
+            Logout
+          </Text>
         </TouchableOpacity>
       </View>
     </View>

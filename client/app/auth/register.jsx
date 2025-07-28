@@ -1,5 +1,5 @@
 import { Link, useRouter } from "expo-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Image,
   StyleSheet,
@@ -16,10 +16,10 @@ import { useDispatch } from "react-redux";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: "aman1",
-    email: "aman@1234",
-    password: "12345678",
-    confirmPassword: "12345678",
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
 
   const router = useRouter();
@@ -60,11 +60,10 @@ const Register = () => {
       <View className="border border-gray-200 rounded-md p-4 my-2 mb-8">
         <View className="mb-20">
           <TextInput
-            type="text"
             name="name"
             value={name}
             onChangeText={handleChange}
-            keyboardType="password"
+            keyboardType="text"
             className="border border-gray-300 rounded-md w-96 my-2 p-4"
             placeholder="Enter Your Name Here"
           />
@@ -102,7 +101,7 @@ const Register = () => {
               Register
             </Text>
           </TouchableOpacity>
-          <Link className="my-2 ml-1 text-blue-500" href="/(auth)">
+          <Link className="my-2 ml-1 text-blue-500" href="/auth/login">
             Already Registered ?
           </Link>
         </View>

@@ -27,8 +27,10 @@ const Index = () => {
   }, []);
 
   return (
-    <View>
-      <Text>Loading...</Text>
+    <View className="min-h-screen p-16">
+      <View className="flex-1 items-center justify-center">
+        <Text className="font-bold  text-2xl text-center">Loading...</Text>
+      </View>
     </View>
   );
 };

@@ -1,12 +1,10 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { baseUrl } from "../../utillity";
 
 const register = async (formData) => {
   try {
-    const response = await axios.post(
-      "http://192.168.57.161:8080/api/auth/register",
-      formData
-    );
+    const response = await axios.post(`${baseUrl}/auth/register`, formData);
     await AsyncStorage.setItem("userToken", JSON.stringify(response.data));
     return response.data;
   } catch (error) {
@@ -16,10 +14,7 @@ const register = async (formData) => {
 
 const login = async (formData) => {
   try {
-    const response = await axios.post(
-      "http://192.168.57.161:8080/api/auth/login",
-      formData
-    );
+    const response = await axios.post(`${baseUrl}/auth/login`, formData);
     await AsyncStorage.setItem("userToken", JSON.stringify(response.data));
     return response.data;
   } catch (error) {
