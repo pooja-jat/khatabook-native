@@ -30,11 +30,11 @@ export default function TransactionListItem({ transaction }) {
         </Text>
         <View className=" flex justifly-center items-center flex-row absolute bottom-3 right-3">
           <TouchableOpacity className="bg-yellow-500 p-2 font-semibold text-sm mx-1 rounded-full">
-            <MaterialIcons name="edit" size={20} color="white" />
+            <MaterialIcons name="edit" size={20} color="white"/>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => removeThisTransaction(transaction._id)}
-            className="bg-red-500 p-2 font-semibold text-sm mx-1 rounded-full"
+            className="bg-red-500 text-red-500 p-2 font-semibold text-sm mx-1 rounded-full"
           >
             <MaterialIcons name="delete" size={20} color="white" />
           </TouchableOpacity>

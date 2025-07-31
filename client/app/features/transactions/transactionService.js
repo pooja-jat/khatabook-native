@@ -1,14 +1,14 @@
-import axios from "axios";
-import { getAxiosOption, baseUrl } from "../../utillity";
+import axios from 'axios';
+import { getAxiosOption, baseUrl } from '../../utillity';
 
-// Get All Traansactions
+// Get All Transactions
 const fetchAllTransactions = async () => {
   const options = await getAxiosOption();
   try {
     const response = await axios.get(`${baseUrl}/transactions`, options);
     return response.data;
   } catch (error) {
-    console.log("err", error);
+    console.log('err', error);
   }
 };
 
@@ -19,7 +19,7 @@ const fetchTransaction = async (id) => {
     const response = await axios.get(`${baseUrl}/transaction/${id}`, options);
     return response.data;
   } catch (error) {
-    console.log("err", error);
+    console.log('err', error);
   }
 };
 
@@ -28,13 +28,33 @@ const fetchTransaction = async (id) => {
 const deleteTransaction = async (id) => {
   const options = await getAxiosOption();
   try {
-    const response = await axios.delete(
-      `${baseUrl}/transaction/${id}`,
-      options
-    );
+    const response = await axios.delete(`${baseUrl}/transaction/${id}`, options);
     return response.data;
   } catch (error) {
-    console.log("err", error);
+    console.log('err', error);
+  }
+};
+
+// Add Transaction
+const createTransaction = async ({ text, amount }) => {
+  const options = await getAxiosOption();
+  try {
+    console.log('options', options);
+    const response = await axios.post(`${baseUrl}/transaction/`, { text, amount }, options);
+    console.log('response', response);
+    return response.data;
+  } catch (error) {
+    console.log('err', error);
+  }
+};
+// Update Transaction
+const updateTransaction = async (updatedTransaction , id) => {
+  const options = await getAxiosOption();
+  try {
+    const response = await axios.put(`${baseUrl}/transaction/${id}`, updatedTransaction, options);
+    return response.data;
+  } catch (error) {
+    console.log('err', error);
   }
 };
 
@@ -42,5 +62,7 @@ const transactionService = {
   fetchAllTransactions,
   fetchTransaction,
   deleteTransaction,
+  createTransaction,
+  updateTransaction,
 };
 export default transactionService;

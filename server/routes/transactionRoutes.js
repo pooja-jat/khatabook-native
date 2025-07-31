@@ -6,7 +6,8 @@ const {
   removeTransaction,
   updateTransaction,
 } = require("../controllers/transactionControllers");
-const authMiddleware = require("../middleware/authMiddleware");
+
+const { authMiddleware } = require("../middleware/authMiddleware");
 const router = express.Router();
 
 router.post("/transaction", authMiddleware, createTransaction);

@@ -8,7 +8,7 @@ const TransactionsList = () => {
     <FlatList
       data={allTransactions}
       keyExtractor={(item) => item._id}
-      renderItem={({ item }) => <TransactionListItem transaction={item} />}
+      renderItem={({ item }) => <TransactionListItem  transaction={item} />}
     />
   );
 };
