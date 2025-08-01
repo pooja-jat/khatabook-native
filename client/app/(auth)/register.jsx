@@ -22,10 +22,10 @@ const Register = () => {
 
   const { name, email, password, confirmPassword } = formData;
 
-  const handleChange = (e) => {
+  const handleChange = (value, name) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -45,15 +45,15 @@ const Register = () => {
     }
   };
 
-  // if (isLoading) {
-  //   return (
-  //     <View className="min-h-screen p-16">
-  //       <View className="flex-1 items-center justify-center">
-  //         <Text className="font-bold  text-2xl text-center">Loading...</Text>
-  //       </View>
-  //     </View>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <View className="min-h-screen p-16">
+        <View className="flex-1 items-center justify-center">
+          <Text className="font-bold  text-2xl text-center">Loading...</Text>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View className="min-h-screen  flex items-center justify-center bg-white p-8">
@@ -64,16 +64,16 @@ const Register = () => {
           <TextInput
             name="name"
             value={name}
-            onChangeText={handleChange}
+            onChangeText={(t) => handleChange(t, 'name')}
             keyboardType="text"
             className="border border-gray-300 rounded-md w-96 my-2 p-4"
             placeholder="Enter Your Name Here"
           />
           <TextInput
-            name="email-address"
+            name="email"
             value={email}
             keyboardType="text"
-            onChange={handleChange}
+            onChangeText={(t) => handleChange(t, 'email')}
             className="border border-gray-300 rounded-md w-96 my-2 p-4"
             placeholder="Enter Email Here"
           />
@@ -81,7 +81,7 @@ const Register = () => {
             name="password"
             value={password}
             keyboardType="password"
-            onChange={handleChange}
+            onChangeText={(t) => handleChange(t, 'password')}
             className="border border-gray-300 rounded-md w-96 my-2 p-4"
             secureTextEntry={true}
             placeholder="Enter Password Here"
@@ -90,7 +90,7 @@ const Register = () => {
             name="confirmPassword"
             value={confirmPassword}
             keyboardType="password"
-            onChange={handleChange}
+            onChangeText={(t) => handleChange(t, 'confirmPassword')}
             className="border border-gray-300 rounded-md w-96 my-2 p-4"
             secureTextEntry={true}
             placeholder="Confirm Password Here"
