@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import TransactionsList from '../components/TransactionsList';
 import { useEffect } from 'react';
 import { getTransactions } from '../features/transactions/transactionSlice';
-import authService from '../features/auth/authService';
+
 import { useRouter } from 'expo-router';
 
-const Index = () => {
+export default function Dashboard() {
   const router = useRouter();
   const transactions = useSelector((state) => state.transactions.allTransactions ?? []);
-  const auth = useSelector((state) => state.auth.auth ?? null);
+  const user = useSelector((state) => state.auth.auth ?? null);
 
   const dispatch = useDispatch();
 
@@ -26,8 +26,7 @@ const Index = () => {
   return (
     <View className="min-h-screen p-4 bg-black">
       <View className="p-2 my-2">
-        <Text className="text-white font-bold my-2 text-3xl">{auth.name}</Text>
-        <Text className="text-white  text-xl font-semibold">Developer</Text>
+        <Text className="text-white font-bold my-2 text-3xl">{user.name}</Text>
       </View>
       <View className=" p-4 rounded-xl " style={styles.main}>
         <Text className="text-lg text-white">Your Current Balance : </Text>
@@ -53,21 +52,10 @@ const Index = () => {
         >
           <Text className=" text-black text-center text-2xl font-bold">Create</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            authService.logOut();
-            router.push('/auth/login');
-          }}
-          className="bg-black border border border-gray-300 py-4 px-4 rounded-md  w-[45%]"
-        >
-          <Text className="text-white text-center text-2xl font-bold">Logout</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
-};
-
-export default Index;
+}
 
 const styles = StyleSheet.create({
   main: {

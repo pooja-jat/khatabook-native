@@ -1,8 +1,8 @@
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { useDispatch } from "react-redux";
-import { removeTransaction } from "../features/transactions/transactionSlice";
+import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useDispatch } from 'react-redux';
+import { removeTransaction } from '../features/transactions/transactionSlice';
 
 export default function TransactionListItem({ transaction }) {
   const router = useRouter();
@@ -22,21 +22,17 @@ export default function TransactionListItem({ transaction }) {
       }}
     >
       <View className="p-4 rounded-md  my-2 rounded-xl" style={styles.main}>
-        <Text className="text-lg text-white font-semibold my-2">
-          {transaction.text}
-        </Text>
-        <Text className="text-2xl text-white font-semibold my-2">
-          {transaction.amount}
-        </Text>
+        <Text className="text-lg text-white font-semibold my-2">{transaction.text}</Text>
+        <Text className="text-2xl text-white font-semibold my-2">{transaction.amount}</Text>
         <View className=" flex justifly-center items-center flex-row absolute bottom-3 right-3">
           <TouchableOpacity className="bg-yellow-500 p-2 font-semibold text-sm mx-1 rounded-full">
-            <MaterialIcons name="edit" size={20} color="white"/>
+            <Ionicons name="create-outline" size={20} color="white" />
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => removeThisTransaction(transaction._id)}
-            className="bg-red-500 text-red-500 p-2 font-semibold text-sm mx-1 rounded-full"
+            className="bg-red-600 text-red-500 p-2 font-semibold text-sm mx-1 rounded-full"
           >
-            <MaterialIcons name="delete" size={20} color="white" />
+            <Ionicons name="trash-outline" size={20} color="white" />
           </TouchableOpacity>
         </View>
       </View>
@@ -46,6 +42,6 @@ export default function TransactionListItem({ transaction }) {
 
 const styles = StyleSheet.create({
   main: {
-    backgroundColor: "#1f1f1f",
+    backgroundColor: '#1f1f1f',
   },
 });

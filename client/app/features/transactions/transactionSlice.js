@@ -104,7 +104,7 @@ const transactionSlice = createSlice({
 
 export default transactionSlice.reducer;
 
-//Get Transaction
+//Get All Transaction
 export const getTransactions = createAsyncThunk('FETCH/TRANSACTIONS', async (_, thunkAPI) => {
   try {
     return await transactionService.fetchAllTransactions();

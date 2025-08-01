@@ -18,7 +18,7 @@ const login = async (formData) => {
     await AsyncStorage.setItem("userToken", JSON.stringify(response.data));
     return response.data;
   } catch (error) {
-    console.log("SomeThing Went Wrong", error);
+    console.log("SomeThing went wrong", error);
   }
 };
 
@@ -26,7 +26,7 @@ const logOut = async () => {
   try {
     await AsyncStorage.removeItem("userToken");
   } catch (error) {
-    console.log("someThing Went Wrong", error);
+    console.log("SomeThing went wrong", error);
   }
 };
 
