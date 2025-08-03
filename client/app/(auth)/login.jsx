@@ -8,8 +8,8 @@ import { getUser } from '../features/auth/authSlice';
 import { Image } from 'react-native';
 
 const Login = () => {
-  const [email, setEmail] = useState('pooja@gmail.com');
-  const [password, setPassword] = useState('12345678');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -26,10 +26,9 @@ const Login = () => {
     }
   };
 
-  useEffect (() => {
-     dispatch(getUser());
-  })
-
+  useEffect(() => {
+    dispatch(getUser());
+  });
 
   return (
     <View className="min-h-screen  flex items-center justify-center bg-white p-8">

@@ -9,16 +9,16 @@ const transactionSlice = createSlice({
     isError: false,
     message: '',
     allTransactions: [],
-    editTransaction: {
+    edit: {
       transaction: {},
       isEdit: false,
     },
   },
   reducers: {
-    transactionEdit: (state, action) => {
+    editTransaction: (state, action) => {
       return {
         ...state,
-        editTransaction: {
+        edit: {
           transaction: action.payload,
           isEdit: true,
         },
@@ -69,7 +69,7 @@ const transactionSlice = createSlice({
       .addCase(removeTransaction.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.allTransactions = state.allTransactions.filter((transaction) => transaction._id !== action.payload._id);
+        state.allTransactions = state.allTransactions.filter((item) => item._id !== action.payload);
         state.isError = false;
       })
       .addCase(removeTransaction.rejected, (state, action) => {
@@ -86,8 +86,8 @@ const transactionSlice = createSlice({
       .addCase(updateTheTransaction.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.allTransactions = state.allTransactions.map((transaction) => (transaction._id === action.payload._id ? action.payload : transaction));
-        state.editTransaction = {
+        state.allTransactions = state.allTransactions.map((item) => (item._id === action.payload._id ? action.payload : item));
+        state.edit = {
           transaction: {},
           isEdit: false,
         };
@@ -102,6 +102,7 @@ const transactionSlice = createSlice({
   },
 });
 
+export const { editTransaction } = transactionSlice.actions;
 export default transactionSlice.reducer;
 
 //Get All Transaction
@@ -143,9 +144,9 @@ export const addTransaction = createAsyncThunk('ADD/TRANSACTION', async ({ text,
 });
 
 //Update Transaction
-export const updateTheTransaction = createAsyncThunk('UPDATE/TRANSACTION', async ({ updatedTransaction }, thunkAPI) => {
+export const updateTheTransaction = createAsyncThunk('UPDATE/TRANSACTION', async (formData, thunkAPI) => {
   try {
-    await transactionService.updateTransaction(updatedTransaction);
+    await transactionService.updateTransaction(formData);
   } catch (error) {
     console.log('object', error);
     const message = error.response.data.message;

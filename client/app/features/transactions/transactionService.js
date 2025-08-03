@@ -48,10 +48,10 @@ const createTransaction = async ({ text, amount }) => {
   }
 };
 // Update Transaction
-const updateTransaction = async (updatedTransaction , id) => {
+const updateTransaction = async (formData) => {
   const options = await getAxiosOption();
   try {
-    const response = await axios.put(`${baseUrl}/transaction/${id}`, updatedTransaction, options);
+    const response = await axios.put(`${baseUrl}/transaction/${formData._id}`, formData, options);
     return response.data;
   } catch (error) {
     console.log('err', error);

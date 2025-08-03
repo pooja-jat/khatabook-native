@@ -25,8 +25,8 @@ export default function Dashboard() {
 
   return (
     <View className="min-h-screen p-4 bg-black">
-      <View className="p-2 my-2">
-        <Text className="text-white font-bold my-2 text-3xl">{user.name}</Text>
+      <View className="p-2 my-2 flex items-center">
+        <Text className="text-white font-bold my-2 text-4xl">{user?.name}</Text>
       </View>
       <View className=" p-4 rounded-xl " style={styles.main}>
         <Text className="text-lg text-white">Your Current Balance : </Text>
@@ -43,16 +43,6 @@ export default function Dashboard() {
         </View>
       </View>
       <TransactionsList />
-      <View className="items-center justify-center flex-row my-16">
-        <TouchableOpacity
-          onPress={() => {
-            router.push('/dashboard/transaction/createTransaction');
-          }}
-          className="bg-white border border-gray-300 py-4 px-4 rounded-md  w-[45%] m-6"
-        >
-          <Text className=" text-black text-center text-2xl font-bold">Create</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }

@@ -6,7 +6,8 @@ import './global.css';
 import Toast from 'react-native-toast-message';
 
 export default function RootLayout() {
-  console.log('first layout');
+
+  
   return (
     <Provider store={store}>
       <SafeScreen>
@@ -14,7 +15,11 @@ export default function RootLayout() {
           screenOptions={{
             headerShown: false,
           }}
-        ></Stack>
+        >
+          <Stack.Screen name="index" />
+          <Stack.Screen name="(auth)" />
+          <Stack.Screen name="(tabs)" />
+        </Stack>
         <Toast />
       </SafeScreen>
     </Provider>
