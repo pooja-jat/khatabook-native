@@ -46,7 +46,7 @@ const registerUser = async (req, res) => {
     name: user.name,
     email: user.email,
     createdAt: user.createdAt,
-    token: generatToken(user._id),
+    token: generateToken(user._id),
   });
 };
 
@@ -68,7 +68,7 @@ const loginUser = async (req, res) => {
       _id: user.id,
       name: user.name,
       email: user.email,
-      token: generatToken(user._id),
+      token: generateToken(user._id),
       createdAt: user.createdAt,
     });
   } else {
@@ -83,7 +83,7 @@ const privateController = (req, res) => {
 
 //Generate Token
 
-const generatToken = (id) => {
+const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: "30d",
   });

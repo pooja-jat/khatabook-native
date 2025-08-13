@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2716dc94-83ef-4b31-9e92-1417489a3deb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/eas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/(auth)/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(auth)/login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/(tabs)/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(tabs)/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/(tabs)/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(tabs)/profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/(tabs)/transaction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/(tabs)/transaction.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/_layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/_layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/components/TransactionListItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/TransactionListItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/components/TransactionsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/TransactionsList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/dashboard/transaction/[id].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/dashboard/transaction/[id].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/features/transactions/transactionService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/features/transactions/transactionService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/features/transactions/transactionSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/features/transactions/transactionSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/features/auth/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/features/auth/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/utillity.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/utillity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/authControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

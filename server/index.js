@@ -24,7 +24,5 @@ app.get("/", (req, res) => {
 app.use("/api/auth", require("./routes/authRoutes"));
 
 app.use("/api", require("./routes/transactionRoutes"));
-//Error Handler
-// app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`SERVER IS RUNNING AT PORT : ${PORT}`));

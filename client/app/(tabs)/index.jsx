@@ -1,13 +1,10 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import TransactionsList from '../components/TransactionsList';
 import { useEffect } from 'react';
 import { getTransactions } from '../features/transactions/transactionSlice';
 
-import { useRouter } from 'expo-router';
-
 export default function Dashboard() {
-  const router = useRouter();
   const transactions = useSelector((state) => state.transactions.allTransactions ?? []);
   const user = useSelector((state) => state.auth.auth ?? null);
 
@@ -26,7 +23,7 @@ export default function Dashboard() {
   return (
     <View className="min-h-screen p-4 bg-black">
       <View className="p-2 my-2 flex items-center">
-        <Text className="text-white font-bold my-2 text-4xl">{user?.name}</Text>
+        <Text className="text-white font-bold my-2 text-3xl uppercase">{user?.name}</Text>
       </View>
       <View className=" p-4 rounded-xl " style={styles.main}>
         <Text className="text-lg text-white">Your Current Balance : </Text>

@@ -11,4 +11,6 @@ export const getAxiosOption = async () => {
   return options;
 };
 
-export const baseUrl = 'http://10.0.2.2:3000/api';
+export const baseUrl = 'https://khatabook-backend-ke5c.onrender.com/api';
+
+// ;'https://khatabook-backend-ke5c.onrender.com/api'

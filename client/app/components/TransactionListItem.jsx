@@ -26,7 +26,7 @@ export default function TransactionListItem({ item }) {
         });
       }}
     >
-      <View className="p-4 rounded-md  my-2 rounded-xl  border border-gray-100 rounded-md" style={styles.main}>
+      <View className="p-4  my-2 border border-gray-100 rounded-xl" style={styles.container}>
         <Text className="text-lg text-white font-semibold my-2">{item.text}</Text>
         <Text className="text-2xl text-white font-semibold my-2">{item.amount}</Text>
         <View className=" flex justifly-center items-center flex-row absolute bottom-3 right-3">
