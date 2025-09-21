@@ -56,8 +56,7 @@ const loginUser = async (req, res) => {
 
   //Check if all fields are coming
   if (!email || !password) {
-    res.status(400);
-    throw new Error("Please Fill All Details!!");
+    return res.status(400).json("Invalid Credentials");
   }
 
   //Find If user Exist
@@ -72,8 +71,7 @@ const loginUser = async (req, res) => {
       createdAt: user.createdAt,
     });
   } else {
-    res.status(406).json("Invalid Credentials");
-    throw new Error("Invalid Credentials");
+    return res.status(400).json("Invalid Credentials");
   }
 };
 

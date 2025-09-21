@@ -1,23 +1,24 @@
 import { Link, useRouter } from 'expo-router';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import authService from '../features/auth/authService';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useDispatch } from 'react-redux';
-import { getUser } from '../features/auth/authSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../features/auth/authSlice';
 import { Image } from 'react-native';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const { isLoading } = useSelector((state) => state.auth);
+
   const router = useRouter();
   const dispatch = useDispatch();
 
   const handleLogin = async () => {
     try {
-      await authService.login({ email, password });
+      await dispatch(login({ email, password }));
       const userToken = await AsyncStorage.getItem('userToken');
-
       if (userToken) {
         router.replace('/(tabs)');
       }
@@ -25,10 +26,6 @@ const Login = () => {
       console.log('SomeThing went wrong', error);
     }
   };
-
-  useEffect(() => {
-    dispatch(getUser());
-  });
 
   return (
     <View className="min-h-screen  flex items-center justify-center bg-white p-8">
@@ -52,7 +49,7 @@ const Login = () => {
             placeholder="Enter Password Here"
           />
           <TouchableOpacity onPress={() => handleLogin()} className="bg-blue-600 py-4 px-4 rounded-md">
-            <Text className="text-white text-center text-xl font-bold">Login</Text>
+            <Text className="text-white text-center text-xl font-bold">{isLoading ? 'Loading...' : 'Login'}</Text>
           </TouchableOpacity>
           <Link className="my-2 ml-1 text-blue-500" href="/forgot-password">
             Forgot Password?
