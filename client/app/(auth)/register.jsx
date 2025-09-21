@@ -1,10 +1,10 @@
 import { Link, useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Alert, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Toast from 'react-native-toast-message';
 import authService from '../features/auth/authService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getUser } from '../features/auth/authSlice';
+import { getUser, register } from '../features/auth/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Register = () => {
@@ -18,6 +18,7 @@ const Register = () => {
   });
 
   const router = useRouter();
+
   const dispatch = useDispatch();
 
   const { name, email, password, confirmPassword } = formData;
@@ -36,7 +37,7 @@ const Register = () => {
         text1: 'Password Not Match',
       });
     } else {
-      await authService.register(formData);
+      await dispatch(register(formData));
       const userToken = await AsyncStorage.getItem('userToken');
       if (userToken) {
         dispatch(getUser());
@@ -44,16 +45,6 @@ const Register = () => {
       }
     }
   };
-
-  if (isLoading) {
-    return (
-      <View className="min-h-screen p-16">
-        <View className="flex-1 items-center justify-center">
-          <Text className="font-bold  text-2xl text-center">Loading...</Text>
-        </View>
-      </View>
-    );
-  }
 
   return (
     <View className="min-h-screen  flex items-center justify-center bg-white p-8">
@@ -96,7 +87,7 @@ const Register = () => {
             placeholder="Confirm Password Here"
           />
           <TouchableOpacity onPress={handleRegister} className="bg-blue-600 py-4 px-4 rounded-md mt-2">
-            <Text className="text-white text-center text-xl font-bold">Register</Text>
+            <Text className="text-white text-center text-xl font-bold">{isLoading ? 'Loading...' : 'Register'}</Text>
           </TouchableOpacity>
           <Link className="my-2 ml-1 text-blue-500" href="/(auth)/login">
             Already Registered ?

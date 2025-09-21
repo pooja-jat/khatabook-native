@@ -50,6 +50,24 @@ const authSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         Alert.alert(action.payload ?? 'Something went password');
+      })
+      .addCase(register.pending, (state, action) => {
+        state.isLoading = true;
+        state.isSuccess = false;
+        state.isError = false;
+      })
+      .addCase(register.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.auth = action.payload;
+        state.isError = false;
+      })
+      .addCase(register.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = false;
+        state.isError = true;
+        state.message = action.payload;
+        Alert.alert(action.payload ?? 'Something went password');
       });
   },
 });
@@ -61,6 +79,15 @@ export default authSlice.reducer;
 export const login = createAsyncThunk('AUTH/LOGIN', async (obj, thunkAPI) => {
   try {
     return await authService.login(obj);
+  } catch (error) {
+    const message = error.response.data;
+    return thunkAPI.rejectWithValue(message);
+  }
+});
+
+export const register = createAsyncThunk('AUTH/REGISTER', async (obj, thunkAPI) => {
+  try {
+    return await authService.register(obj);
   } catch (error) {
     const message = error.response.data;
     return thunkAPI.rejectWithValue(message);

@@ -9,21 +9,18 @@ const registerUser = async (req, res) => {
   //Check If all  fields are coming
 
   if (!email || !name || !password) {
-    res.status(400);
-    throw new Error("Please Fill All Details!!");
+    return res.status(400).json("Invalid details");
   }
 
   //Check if password length atleast 8 character Long
   if (password.length < 8) {
-    res.status(400);
-    throw new Error("Password Length Must Be 8 Character Long");
+    return res.status(400).json("Password Length Must Be 8 Character Long");
   }
   //Check if user already exists
   const emailExist = await User.findOne({ email: email });
 
   if (emailExist) {
-    res.status(400);
-    throw new Error("User Already Exist");
+    return res.status(400).json("User Already Exist");
   }
 
   //Hash Password
@@ -38,8 +35,7 @@ const registerUser = async (req, res) => {
   });
 
   if (!user) {
-    res.status(400);
-    throw new Error("User Not Created");
+    return res.status(400).json("User Not Created");
   }
 
   res.status(201).json({
