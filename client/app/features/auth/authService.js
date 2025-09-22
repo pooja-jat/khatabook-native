@@ -1,6 +1,6 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { baseUrl } from '../../utillity';
+import { baseUrl } from '../../utility/utillity';
 
 const register = async (formData) => {
   try {
@@ -18,6 +18,7 @@ const login = async (formData) => {
     await AsyncStorage.setItem('userToken', JSON.stringify(response.data));
     return response.data;
   } catch (error) {
+    console.error(error);
     throw error;
   }
 };

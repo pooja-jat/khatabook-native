@@ -110,8 +110,7 @@ export const getTransactions = createAsyncThunk('FETCH/TRANSACTIONS', async (_, 
   try {
     return await transactionService.fetchAllTransactions();
   } catch (error) {
-    console.log('object', error);
-    const message = error.response.data.message;
+    const message = error.response.data;
     return thunkAPI.rejectWithValue(message);
   }
 });

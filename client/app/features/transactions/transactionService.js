@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getAxiosOption, baseUrl } from '../../utillity';
+import { baseUrl, getAxiosOption } from '../../utility/utillity';
 
 // Get All Transactions
 const fetchAllTransactions = async () => {
@@ -9,6 +9,7 @@ const fetchAllTransactions = async () => {
     return response.data;
   } catch (error) {
     console.log('err', error);
+    throw error;
   }
 };
 

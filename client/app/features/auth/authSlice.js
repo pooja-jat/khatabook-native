@@ -49,7 +49,7 @@ const authSlice = createSlice({
         state.isSuccess = false;
         state.isError = true;
         state.message = action.payload;
-        Alert.alert(action.payload ?? 'Something went password');
+        Alert.alert(action.payload ?? 'Something went wrong');
       })
       .addCase(register.pending, (state, action) => {
         state.isLoading = true;
@@ -67,7 +67,7 @@ const authSlice = createSlice({
         state.isSuccess = false;
         state.isError = true;
         state.message = action.payload;
-        Alert.alert(action.payload ?? 'Something went password');
+        Alert.alert(action.payload ?? 'Something went wrong');
       });
   },
 });

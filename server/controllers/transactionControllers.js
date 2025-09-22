@@ -10,16 +10,9 @@ const createTransaction = async (req, res) => {
     throw new Error("Please Fill All Details!!");
   }
 
-  //Find User
-  const user = await User.findById(req.user._id);
-  if (!user) {
-    res.status(404);
-    res.json("User Not Found");
-  }
-
   // Create Transaction
   const newData = await transactionModel.create({
-    user: user._id,
+    user: req.user._id,
     text,
     amount,
   });
@@ -30,7 +23,7 @@ const createTransaction = async (req, res) => {
   }
   const newTransaction = {
     _id: newData.id,
-    user: user._id,
+    user: req.user._id,
     text,
     amount,
   };
@@ -51,7 +44,8 @@ const getTransaction = async (req, res) => {
 
 //All Transaction
 const allTransactions = async (req, res) => {
-  const allData = await transactionModel.find();
+  console.log("req.user", req.user);
+  const allData = await transactionModel.find({ user: req.user._id });
 
   res.status(200).json(allData);
   if (!allTransactions) {

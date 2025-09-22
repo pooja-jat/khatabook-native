@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const Transaction = () => {
   const { isError, message, isSuccess } = useSelector((state) => state.auth);
-  const { edit } = useSelector((state) => state.transactions);
+  const { edit, isLoading } = useSelector((state) => state.transactions);
 
   const router = useRouter();
   const dispatch = useDispatch();
@@ -63,9 +63,9 @@ const Transaction = () => {
 
       <TouchableOpacity className="my-2 bg-emerald-600 border border-gray-400 py-4 px-8 rounded-md w-full flex itmes-center justify-center flex-row">
         <Text className="text-white font-bold text-2xl" onPress={handleAdd}>
-          {edit.isEdit ? 'Update Transaction' : 'Save Transaction'}
+          {isLoading ? 'Loading...' : edit.isEdit ? 'Update Transaction' : 'Save Transaction'}
         </Text>
-        <Ionicons name="arrow-forward-outline" className="mx-2" size={24} color={'white'} />
+        {!isLoading && <Ionicons name="arrow-forward-outline" className="mx-2" size={24} color={'white'} />}
       </TouchableOpacity>
     </View>
   );

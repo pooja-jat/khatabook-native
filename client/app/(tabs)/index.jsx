@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
   main: {
     backgroundColor: '#1f1f1f',
   },
-
   txt: {
     backgroundColor: '#7B5EF6',
   },
